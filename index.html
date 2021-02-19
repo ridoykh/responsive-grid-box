@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Grid System</title>
+	<style>
+		.container{
+			padding: 20px;
+			display: grid;
+			grid-template-columns: 2fr 2fr 2fr;
+			grid-gap: 1em;
+			grid-auto-rows: minmax(100px, auto);
+		}
+		.child{
+			background: #2c3e50;
+			color: #fff;
+			padding: 2em;
+		}
+		.child:nth-child(odd){
+			background: #8e44ad;
+		}
+		.child:nth-child(1){
+			grid-row: 1/3;
+			grid-column: 1/3;
+		}
+		@media(max-width: 767px){
+			.container{
+			grid-template-columns: 2fr 2fr;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="child">
+			<h2>Box 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+		<div class="child">
+			<h2>Box 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+		<div class="child">
+			<h2>Box 3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+		<div class="child">
+			<h2>Box 4</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+		<div class="child">
+			<h2>Box 5</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+		<div class="child">
+			<h2>Box 6</h2>
+			<p></p>
+		</div>
+		<div class="child">
+			<h2>Box 7</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+		</div>
+		<div class="child">
+			<h2>Box 8</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+		</div>
+		<div class="child">
+			<h2>Box 9</h2>
+			<p></p>
+		</div>
+	</div>
+</body>
+</html>
